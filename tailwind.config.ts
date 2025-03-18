@@ -25,6 +25,11 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'success-color': '#10b981',
+				'warning-color': '#f59e0b',
+				'danger-color': '#dc2626',
+				'success-500': '#10b981',
+				'warning-500': '#f59e0b',
 				emergency: {
 					50: '#FFF5F5',
 					100: '#FFE9E9',
@@ -138,6 +143,17 @@ export default {
 				'ripple': {
 					'0%': { transform: 'scale(0)', opacity: 1 },
 					'100%': { transform: 'scale(4)', opacity: 0 }
+				},
+				'pinDrop': {
+					'0%': { transform: 'translate(-50%, -200%)' },
+					'60%': { transform: 'translate(-50%, -40%)' },
+					'100%': { transform: 'translate(-50%, -50%)' }
+				},
+				'ping': {
+					'75%, 100%': {
+						transform: 'translate(-50%, -50%) scale(2)',
+						opacity: 0
+					}
 				}
 			},
 			animation: {
@@ -151,7 +167,9 @@ export default {
 				'wave': 'wave 1s ease-in-out infinite',
 				'spin-slow': 'spin-slow 3s linear infinite',
 				'bounce-subtle': 'bounce-subtle 2s infinite',
-				'ripple': 'ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite'
+				'ripple': 'ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite',
+				'pinDrop': 'pinDrop 1s ease-out',
+				'ping': 'ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite'
 			},
 			backdropFilter: {
 				'none': 'none',

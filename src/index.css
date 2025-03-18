@@ -183,3 +183,22 @@
   transform: translateY(-10px);
   transition: opacity 300ms, transform 300ms;
 }
+
+/* Emergency styles */
+body.dark-mode {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+@keyframes pinDrop {
+  0% { transform: translate(-50%, -200%); }
+  60% { transform: translate(-50%, -40%); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}

@@ -8,6 +8,7 @@ import DistressAnalyzer from '@/components/DistressAnalyzer';
 import LocationTracker from '@/components/LocationTracker';
 import PoliceDashboard from '@/components/PoliceDashboard';
 import { Shield, ArrowRight, AlertTriangle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [callActive, setCallActive] = useState(false);
@@ -73,9 +74,10 @@ const Index = () => {
               <span className="mr-2">Try the Demo</span>
               <ArrowRight size={16} />
             </button>
-            <button className="px-8 py-3 rounded-lg border border-neutral-300 bg-white hover:bg-neutral-100 transition-colors">
-              How It Works
-            </button>
+            <Link to="/emergency" className="px-8 py-3 rounded-lg bg-primary text-white hover:bg-primary/80 transition-colors flex items-center">
+              <span className="mr-2">Emergency Response Center</span>
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
@@ -212,7 +214,6 @@ const Index = () => {
               </ul>
             </div>
             
-            {/* Feature 3 */}
             <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
               <div className="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-green-600">
@@ -261,9 +262,9 @@ const Index = () => {
             <button className="px-8 py-3 rounded-lg bg-white text-primary hover:bg-neutral-100 transition-colors">
               Request Demo
             </button>
-            <button className="px-8 py-3 rounded-lg border border-white/30 hover:bg-white/10 transition-colors">
-              Contact Sales
-            </button>
+            <Link to="/emergency" className="px-8 py-3 rounded-lg border border-white/30 hover:bg-white/10 transition-colors">
+              View Emergency Center
+            </Link>
           </div>
         </div>
       </section>
