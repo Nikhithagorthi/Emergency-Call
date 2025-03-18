@@ -1,69 +1,13 @@
-# Welcome to your Lovable project
+AI-Assisted Emergency Police Call System: Enhancing Emergency Response with AI Problem Overview: In emergency situations, victims often struggle to convey their distress effectively, leading to delays in police response. Miscommunication, officer unavailability, or the lack of precise location details can be life-threatening. A solution is needed to bridge this gap and ensure a faster, more efficient emergency response system.
 
-## Project info
+Proposed Solution: AI-Assisted Emergency Police Call System This system integrates Artificial Intelligence (AI), Machine Learning (ML), and Natural Language Processing (NLP) to assist emergency calls, analyze distress levels, and automatically relay critical information to the nearest police station.
 
-**URL**: https://lovable.dev/projects/a0ee3949-999c-492f-9303-dccf7e524da9
+Key Features & Functionality AI-Powered Call Assistance:
 
-## How can I edit this code?
+If police officers are unavailable, an AI-powered virtual assistant answers emergency calls. The AI assistant engages with the caller, asking relevant questions to extract critical details. It ensures that even in situations where human operators are overloaded, emergency calls are never ignored. Sentiment Analysis & Voice Recognition:
 
-There are several ways of editing your application.
+AI-driven sentiment analysis processes the caller's tone, speech patterns, and emotions to detect distress levels. Voice recognition technology enables communication in multiple languages and dialects, making the system accessible to diverse populations. Automated Location Tracking & Alert System:
 
-**Use Lovable**
+The AI system retrieves the caller’s location using GPS tracking. If distress is detected, the system immediately forwards the caller’s location, distress level, and other details to the nearest police station. Police Dashboard for Real-Time Monitoring:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a0ee3949-999c-492f-9303-dccf7e524da9) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a0ee3949-999c-492f-9303-dccf7e524da9) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+A dedicated dashboard displays incoming emergency calls, prioritizing cases based on urgency. Officers can monitor real-time data, including caller information, distress analysis, and location tracking, enabling them to take immediate action.
