@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
-import { AlertTriangle, Volume2, Waveform } from 'lucide-react';
+import { AlertTriangle, Volume2, AudioWaveform } from 'lucide-react';
 
 interface DistressAnalyzerProps {
   distressLevel: number; // 0 to 1, where 1 is highest distress
@@ -47,17 +46,13 @@ const DistressAnalyzer: React.FC<DistressAnalyzerProps> = ({
         const elapsedTime = Date.now() - startTimeRef.current;
         const progress = Math.min(elapsedTime / analysisDuration, 1);
         
-        // Gradually increase to the target distress level
         setCurrentLevel(progress * distressLevel);
         
-        // Update analyzed features with different timing
         setAnalyzedFeatures(prev => 
           prev.map((feature, index) => {
-            // Complete each feature at different times
             const featureProgress = Math.min((elapsedTime - (index * 800)) / 1000, 1);
             const isComplete = featureProgress >= 1;
             
-            // Generate a value influenced by the distress level
             const value = isComplete 
               ? Math.max(0.3, Math.min(0.9, distressLevel * (0.7 + Math.random() * 0.4)))
               : feature.value;
@@ -72,7 +67,6 @@ const DistressAnalyzer: React.FC<DistressAnalyzerProps> = ({
           setIsAnalyzing(false);
           setShowPulse(distressLevel > 0.7);
           
-          // Notify parent component
           if (onAnalysisComplete) {
             onAnalysisComplete({
               distressLevel,
@@ -115,7 +109,7 @@ const DistressAnalyzer: React.FC<DistressAnalyzerProps> = ({
       <div className="px-4 py-3 bg-neutral-100 border-b border-neutral-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Waveform size={18} className="mr-2 text-primary" />
+            <AudioWaveform size={18} className="mr-2 text-primary" />
             <h3 className="font-medium text-primary">Distress Analyzer</h3>
           </div>
           {isAnalyzing ? (

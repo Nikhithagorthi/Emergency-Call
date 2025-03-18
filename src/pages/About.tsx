@@ -1,7 +1,6 @@
-
 import React from 'react';
 import Header from '@/components/Header';
-import { Shield, CheckCircle, Lightbulb, Search, Users, MessageSquare, Award, ArrowRight } from 'lucide-react';
+import { Shield, CheckCircle, Lightbulb, Search, Users, MessageSquare, Award, ArrowRight, User, MapPin } from 'lucide-react';
 
 const About = () => {
   return (
